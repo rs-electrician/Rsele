@@ -93,3 +93,27 @@
   <div class="service"><h3>Appliances Repairing</h3><img src="https://i.ibb.co/KxL3mr8Z/96aeaad40c58aaa7b0a652580a843fed.jpg"><div class="price">Based on appliance</div><form action="https://formsubmit.co/rselectrician9283@gmail.com" method="POST"><input type="hidden" name="service" value="Appliances Repairing"><input type="text" name="name" placeholder="Your Name" required><input type="tel" name="phone" placeholder="Phone Number" required><textarea name="message" placeholder="Appliance Details & Address"></textarea><button type="submit">✨ Book Now</button></form></div>
 
   <div class="service"><h3>Earthing – ₹2000, ₹1500, ₹1000</h3><img src="https://i.ibb.co/Z18Jc7RL/df0aaeb61b442c8a657fae6c0c98f823.jpg"><div class="price">Metro ₹2000 | Tier-2 ₹1500 | Town ₹1000</div><form action="https://formsubmit.co/rselectrician9283@gmail.com" method="POST"><input type="hidden" name="service" value="Earthing"><input type="text" name="name" placeholder="Your Name" required><input type="tel" name="phone" placeholder="Phone Number" required><textarea name="message" placeholder="Address & Details"></textarea><button
+
+  <!-- ⭐ Feedback Section -->
+<section id="feedback">
+  <h2>⭐ Customer Feedback</h2>
+  <p style="text-align:center;">Please rate our service</p>
+  <div id="stars" style="text-align:center;">
+    <span onclick="rate(1)">★</span>
+    <span onclick="rate(2)">★</span>
+    <span onclick="rate(3)">★</span>
+    <span onclick="rate(4)">★</span>
+    <span onclick="rate(5)">★</span>
+  </div>
+</section>
+
+<script>
+  function rate(n) {
+    let stars = document.querySelectorAll('#stars span');
+    stars.forEach((star, i) => {
+      if (i < n) star.classList.add('active');
+      else star.classList.remove('active');
+    });
+    alert("Thanks for giving " + n + " star rating!");
+  }
+</script>
