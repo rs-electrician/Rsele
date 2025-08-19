@@ -1,0 +1,23 @@
+<!-- ⭐ Feedback Section -->
+<section id="feedback">
+  <h2>⭐ Customer Feedback</h2>
+  <p style="text-align:center;">Please rate our service</p>
+  <div id="stars" style="text-align:center;">
+    <span onclick="rate(1)">★</span>
+    <span onclick="rate(2)">★</span>
+    <span onclick="rate(3)">★</span>
+    <span onclick="rate(4)">★</span>
+    <span onclick="rate(5)">★</span>
+  </div>
+</section>
+
+<script>
+  function rate(n) {
+    let stars = document.querySelectorAll('#stars span');
+    stars.forEach((star, i) => {
+      if (i < n) star.classList.add('active');
+      else star.classList.remove('active');
+    });
+    alert("Thanks for giving " + n + " star rating!");
+  }
+</script>
